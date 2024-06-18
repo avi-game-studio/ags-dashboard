@@ -1,1 +1,24 @@
-<p>comments works!</p>
+<div class="comment" *ngFor="let comment of comments">
+  <p>{{ comment.author }}: {{ comment.text }}</p>
+  <div class="actions">
+    <button (click)="likeComment(comment)"><i class="fas fa-thumbs-up">({{ comment.likes }})</i></button>
+    <!-- Like icon -->
+    <button (click)="dislikeComment(comment)"><i class="fas fa-thumbs-down">({{ comment.dislikes }})</i></button>
+    <!-- Dislike icon -->
+    <button (click)="toggleReplyBox(comment)"><i class="fas fa-reply"></i></button>
+    <!-- Reply icon -->
+     <button (click)="toggleReplies(comment)">
+      {{ comment.showReplies ? 'Hide Replies' : 'Show Replies' }}
+    </button>
+  </div>
+   <div class="replies" *ngIf="comment.showReplies">
+    <app-comments
+      *ngFor="let reply of comment.replies"
+      [comments]="[reply]"
+    ></app-comments>
+  </div>
+  <div class="reply-box" *ngIf="comment.showReplyBox" >
+    <textarea [(ngModel)]="newReply" placeholder="Write a reply..."></textarea>
+    <button (click)="submitReply(comment)" >Submit</button>
+  </div>
+</div>
