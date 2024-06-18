@@ -1,38 +1,30 @@
 <!-- all -->
 <div class="trending-section-wrapper">
-    <h2 class="section-header">Trending:</h2>
-    <!-- outside -->
-    <div class="swiper">
-        <!-- inside -->
-        <div class="swiper-wrapper">
-            <!-- slide  -->
-            <div class="trending-slide">
-                <div class="trending-item-sidebar">
-                <p class="f-poppins">Delicious in Du...</p>
-                <span>03</span>
-                </div>
-                <a href="#">
-                    <img src="https://i.pinimg.com/736x/65/92/39/6592392e1bbffb904ac76bd544dae3b8.jpg" class="trending-slide-img"/>
-                </a>
-            </div>
-            <div class="trending-slide">
-                <div class="trending-item-sidebar">
-                <p class="f-poppins">Delicious in Du...</p>
-                <span>03</span>
-                </div>
-                <a href="#">
-                    <img src="./card img 1.jpeg" class="trending-slide-img"/>
-                </a>
-            </div>
-            <div class="trending-slide">
-                <div class="trending-item-sidebar">
-                <p class="f-poppins">Delicious in Du...</p>
-                <span>03</span>
-                </div>
-                <a href="#">
-                    <img src="./card img 1.jpeg" class="trending-slide-img"/>
-                </a>
-            </div>
+  <h2 class="section-header">{{ title }}</h2>
+  <!-- outside -->
+  <div class="swiper">
+    <!-- inside -->
+    <div class="swiper-wrapper">
+      <!-- slide  -->
+      <div class="trending-slide" *ngFor="let trending of trendings">
+        <div class="trending-item-sidebar">
+          <p class="f-poppins">{{ trending.game_name }}</p>
+          <span>{{ trending.id }}</span>
         </div>
+        <a href="#">
+          <img src="{{ trending.imgURL }}" class="trending-slide-img" />
+        </a>
+      </div>
+    </div>
+    <div class="trending-swiper-navigation trans-c-03">
+      <div class="btn-nextTwo swiper-controls">
+        <i class="fa-solid fa-greater-than"></i>
+      </div>
+      <div
+        class="btn-prevTwo swiper-controls"
+      >
+        <i class="fa-solid fa-less-than"></i>
+      </div>
     </div>
   </div>
+</div>
