@@ -1,24 +1,25 @@
 <div class="comment" *ngFor="let comment of comments">
+  <img [src]="comment.profilePicture" alt="{{ comment.author }}'s profile picture" class="profile-picture">
   <p>{{ comment.author }}: {{ comment.text }}</p>
   <div class="actions">
-    <button (click)="likeComment(comment)"><i class="fas fa-thumbs-up">({{ comment.likes }})</i></button>
+    <button (click)="likeComment(comment)" class="commit-button"><i class="fas fa-thumbs-up">({{ comment.likes }})</i></button>
     <!-- Like icon -->
-    <button (click)="dislikeComment(comment)"><i class="fas fa-thumbs-down">({{ comment.dislikes }})</i></button>
+    <button (click)="dislikeComment(comment)" class="commit-button"><i class="fas fa-thumbs-down">({{ comment.dislikes }})</i></button>
     <!-- Dislike icon -->
-    <button (click)="toggleReplyBox(comment)"><i class="fas fa-reply"></i></button>
+    <button (click)="toggleReplyBox(comment)" class="commit-button"><i class="fas fa-reply"></i></button>
     <!-- Reply icon -->
-     <button (click)="toggleReplies(comment)">
+    <button (click)="toggleReplies(comment)" class="commit-button">
       {{ comment.showReplies ? 'Hide Replies' : 'Show Replies' }}
     </button>
   </div>
-   <div class="replies" *ngIf="comment.showReplies">
+  <div class="replies" *ngIf="comment.showReplies">
     <app-comments
       *ngFor="let reply of comment.replies"
       [comments]="[reply]"
     ></app-comments>
   </div>
-  <div class="reply-box" *ngIf="comment.showReplyBox" >
+  <div class="reply-box" *ngIf="comment.showReplyBox">
     <textarea [(ngModel)]="newReply" placeholder="Write a reply..."></textarea>
-    <button (click)="submitReply(comment)" >Submit</button>
+    <button (click)="submitReply(comment)" class="commit-button">Submit</button>
   </div>
 </div>

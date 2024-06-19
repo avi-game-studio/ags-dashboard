@@ -1,23 +1,24 @@
 .comment {
-  border: 1px solid #ccc;
   padding: 10px;
   margin: 10px 0;
-
 }
 
-.actions {
-  margin-top: 5px;
+.comment img.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .actions button {
-  margin-right: 10px;
   background-color: #53ff86;
   border-radius: 5px;
 }
-button{
+
+.commit-button {
   background-color: #53ff86;
   border-radius: 5px;
 }
+
 .reply-box {
   margin-top: 10px;
 }
