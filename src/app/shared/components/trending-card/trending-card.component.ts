@@ -15,7 +15,9 @@ import { PRODUCTS } from './mockData';
   styleUrls: ['./trending-card.component.css'],
 })
 export class TrendingCardComponent {
-
+  // ⚠️ warning ⚠️
+  // Make sure to use 10 cards.
+  // If you use < 10. It may cause problems.
   @Input() products: product[] = [];
 
   constructor() {
