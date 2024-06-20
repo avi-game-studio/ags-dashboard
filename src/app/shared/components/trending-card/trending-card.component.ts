@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { product } from './trending-card.model'; // Ensure this import is correct
+import { product } from './trending-card.model';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
@@ -63,7 +63,24 @@ export class TrendingCardComponent implements OnInit {
         GameName: 'Dragon ball z',
         image:
           'https://th.bing.com/th/id/OIP.PTUUskrhrzLYeZBNigmhxwHaNK?w=116&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7',
-      }
+      },
+      {
+        id: 8,
+        GameName: 'One Piece',
+        image:
+        'https://th.bing.com/th/id/OIP.B5OGCL5rhzpxy82rlyCcigHaNK?w=187&h=333&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+      },
+      {
+        id: 9,
+        GameName: 'One Piece',
+        image:
+        'https://th.bing.com/th/id/OIP.B5OGCL5rhzpxy82rlyCcigHaNK?w=187&h=333&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+      },{
+        id: 10,
+        GameName: 'One Piece',
+        image:
+        'https://th.bing.com/th/id/OIP.B5OGCL5rhzpxy82rlyCcigHaNK?w=187&h=333&c=7&r=0&o=5&dpr=1.3&pid=1.7',
+      },
     ];
   }
 
