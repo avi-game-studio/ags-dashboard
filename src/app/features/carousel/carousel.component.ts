@@ -7,21 +7,23 @@ import { TagModule } from 'primeng/tag';
 
 @Component({
     selector: 'carousel-basic-demo',
-    templateUrl: './carousel.component,html',
+    templateUrl: './carousel.component.html',
     standalone: true,
     imports: [CarouselModule, ButtonModule, TagModule],
     // providers: [CarouselService]
 })
-export class CarouselBasicDemo implements OnInit {
-    // products: Product[] | undefined;
+export class CarouselComponent implements OnInit {
+    products: any[];
 
     responsiveOptions: any[] | undefined;
 
-    // constructor(private productService: ProductService) {}
+    constructor() {
+        this.products = []
+    }
 
     ngOnInit() {
         // this.productService.getProductsSmall().then((products) => {
-            // this.products = products;
+        // this.products = products;
         // });
 
         this.responsiveOptions = [
@@ -51,6 +53,8 @@ export class CarouselBasicDemo implements OnInit {
                 return 'warning';
             case 'OUTOFSTOCK':
                 return 'danger';
+            default:
+                return "info"
         }
     }
 }
