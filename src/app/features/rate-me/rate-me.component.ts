@@ -11,4 +11,7 @@ import { RatingModule } from 'primeng/rating';
 })
 export class RateMeComponent {
   value!: number;
+  constructor() {
+    this.value = 0;
+  }
 }
