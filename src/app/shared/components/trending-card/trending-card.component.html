@@ -1,30 +1,38 @@
-<!-- all -->
-<div class="trending-section-wrapper">
-  <h2 class="section-header">{{ title }}</h2>
-  <!-- outside -->
-  <div class="swiper">
-    <!-- inside -->
-    <div class="swiper-wrapper">
-      <!-- slide  -->
-      <div class="trending-slide" *ngFor="let trending of trendings">
-        <div class="trending-item-sidebar">
-          <p class="f-poppins">{{ trending.game_name }}</p>
-          <span>{{ trending.id }}</span>
-        </div>
-        <a href="#">
-          <img src="{{ trending.imgURL }}" class="trending-slide-img" />
-        </a>
-      </div>
-    </div>
-    <div class="trending-swiper-navigation trans-c-03">
-      <div class="btn-nextTwo swiper-controls">
-        <i class="fa-solid fa-greater-than"></i>
-      </div>
-      <div
-        class="btn-prevTwo swiper-controls"
-      >
-        <i class="fa-solid fa-less-than"></i>
-      </div>
-    </div>
-  </div>
+<div class="card">
+    <p-carousel 
+        [value]="products" 
+        [numVisible]="3" 
+        [numScroll]="3" 
+        [circular]="false" 
+        [responsiveOptions]="responsiveOptions">
+            <ng-template let-product pTemplate="item">
+                <div class="border-1 surface-border border-round m-2 p-3">
+                    <div class="mb-3">
+                        <div class="relative mx-auto">
+                            <img 
+                                src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" 
+                                [alt]="product.name" 
+                                class="w-full border-round" />
+                            <p-tag 
+                                [value]="product.inventoryStatus" 
+                                [severity]="getSeverity(product.inventoryStatus)" 
+                                class="absolute" 
+                                [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" />
+                        </div>
+                    </div>
+                    <div class="mb-3 font-medium">
+                        {{ product.name }}
+                    </div>
+                    <div class="flex justify-content-between align-items-center">
+                    <div class="mt-0 font-semibold text-xl">
+                        {{ '$' + product.price }}
+                    </div>
+                        <span>
+                            <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
+                            <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
+                        </span>
+                    </div>
+                </div>
+            </ng-template>
+    </p-carousel>
 </div>
