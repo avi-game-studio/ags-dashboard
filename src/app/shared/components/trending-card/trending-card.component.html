@@ -2,7 +2,7 @@
 <div class="card">
   <p-carousel
     [value]="products"
-    [numVisible]="4"
+    [numVisible]="3"
     [numScroll]="1"
     [circular]="false"
   >
@@ -12,7 +12,8 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="trending-slide" *ngFor="let product of products">
-              <div class="trending-item-sidebar" >
+              <div class="trending-item-sidebar " >
+                <div class="gradient-overlay-sidebar"></div>
                 <p class="f-poppins">{{ product.GameName }}</p>
                 <span>{{ product.id }}</span>
               </div>
