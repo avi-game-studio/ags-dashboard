@@ -1,84 +1,93 @@
-@import "@fortawesome/fontawesome-free/css/all.min.css";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .trending-section-wrapper {
-    width: 100vw;
-    height: 40vh;
-    h2 {
-      margin: 10px;
-    }
-    .swiper {
-      padding: 20px 60px 20px 0;
-      position: relative;
-      overflow: hidden;
-      overflow: clip;
-      list-style: none;
-      padding: 0;
-      z-index: 1;
-      display: block;
-      .swiper-wrapper {
-        display: flex;
-        transform: translateZ(0);
-        position: relative;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        display: flex;
-        transition-property: transform;
-        box-sizing: content-box;
-        .trending-slide {
-          width: 230px;
-          margin-right: 10px;
-          height: 230px;
-          position: relative;
-          padding: 10px;
-          color: black;
-          display: block;
-          border: 1px solid black;
-          display: grid;
-          justify-content: center;
-  
-          .trending-item-sidebar {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            row-gap: 50px;
-          }
-          p {
-            transform: rotate(270deg);
-            white-space: nowrap;
-            font-size: 17px;
-            width: 100px;
-          }
-          span {
-            color: var(--theme);
-            font-family: Poppins;
-            font-size: 18px;
-            font-weight: 600;
-          }
-        }
-        a {
-          width: auto;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 40px;
-          .trending-slide-img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-          }
-      }
-      }
-    }
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #413a73;
+  color: #53ff86;
+
+}
+
+.trending-section-wrapper {
+  width: 100vw;
+  height: 38vh;
+}
+
+h2 {
+  padding: 25px 0 15px 20px;
+}
+
+.swiper {
+  padding: 20px 60px 20px 0;
+  position: relative;
+  padding: 0;
+  z-index: 1;
+}
+
+.swiper-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.trending-slide {
+  width: 210px;
+  margin-right: 50px;
+  height: 230px;
+  position: relative;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.trending-item-sidebar {
+  color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  row-gap: 50px;
+}
+
+.trending-slide p {
+  transform: rotate(270deg);
+  white-space: nowrap;
+  font-size: 17px;
+  width: 160px;
+  padding-left: 25px;
+}
+
+.trending-slide span {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  z-index: 7;
+}
+
+a {
+  width: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+}
+
+.trending-slide-img {
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+}
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1.644)10%, rgba(0, 0, 0, 0));
+  z-index: 2;
+}
