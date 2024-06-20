@@ -9,7 +9,7 @@ export class CustomCurrencyPipe implements PipeTransform {
 
   constructor(private currencyPipe: CurrencyPipe) {}
 
-  transform(value: number, currencyCode: string = 'USD', display: string | boolean = 'symbol', digitsInfo?: string, locale?: string): string | null {
+  transform(value: number, currencyCode: string = 'INR', display: string | boolean = 'symbol', digitsInfo?: string, locale?: string): string | null {
     if (value == null) {
       return null;
     }

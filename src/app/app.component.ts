@@ -4,6 +4,7 @@ import { GlobalHeaderComponent } from './shared/components/global-header/global-
 import { GlobalFooterComponent } from './shared/components/global-footer/global-footer.component';
 import { CustomCurrencyPipe } from './shared/pipes/custom-currency.pipe';
 import { CurrencyPipe } from '@angular/common';
+import { cursorTo } from 'readline';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { CurrencyPipe } from '@angular/common';
     CurrencyPipe
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  providers: [CurrencyPipe]
 })
 export class AppComponent {
   title = 'ags-dashboard';
