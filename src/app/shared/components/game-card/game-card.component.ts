@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Game_card } from '../../../models/interfaces/game.interface';
 @Component({
-  selector: 'app-trending-card',
+  selector: 'app-game-card',
   standalone: true,
   imports: [CarouselModule, ButtonModule, TagModule, CommonModule, FormsModule],
   templateUrl: './game-card.component.html',
