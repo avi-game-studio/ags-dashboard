@@ -9,10 +9,10 @@ import { GlobalFooterComponent } from './shared/components/global-footer/global-
   imports: [
     RouterOutlet,
     GlobalHeaderComponent,
-    GlobalFooterComponent
+    GlobalFooterComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'ags-dashboard';
