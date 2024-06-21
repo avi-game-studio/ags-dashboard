@@ -1,26 +1,45 @@
+<!-- Header section containing the menu icon, logo, and title -->
 <header>
   <div class="menu-icon">
     <i class="fa-solid fa-bars"></i>
+    <!-- Font Awesome icon for the menu -->
   </div>
   <div class="logo">
     <img src="assets/logo.png" alt="logo" />
+    <!-- Logo image -->
   </div>
   <div class="title">AVI GAME STUDIO</div>
+  <!-- Title of the game studio -->
 </header>
+
+<!-- Main container for the content -->
 <div class="container">
+  <!-- Content section containing game status, game area, and game details -->
   <div class="content">
+    <!-- Game status section displaying the levels -->
     <div class="game-status">
       <h2>Game Status</h2>
       <div class="level-grid">
-        <div *ngFor="let enabled of levels; let i = index" [class.disabled]="!enabled">
-          <button (click)="enabled ? completeLevel(i + 1) : null">{{ i + 1 }}</button>
+        <!-- Loop through levels and display each level -->
+        <div
+          *ngFor="let level of levels; let i = index"
+          [class.locked]="!level.enabled"
+        >
+          <button (click)="level.enabled ? completeLevel(i) : null">
+            <!-- Display level number if enabled, otherwise display lock icon -->
+            {{ level.enabled ? i + 1 : "🔒" }}
+          </button>
         </div>
       </div>
     </div>
+
+    <!-- Game area section for the main game content -->
     <div class="game-area">
       <h2>Game Area</h2>
       <!-- Game area content goes here -->
     </div>
+
+    <!-- Game details section displaying game image, title, buttons, and description -->
     <div class="game-details">
       <img
         src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -33,21 +52,29 @@
         <button>Stop</button>
       </div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam
+        lectus.
       </p>
     </div>
   </div>
+
+  <!-- Full screen button section -->
   <div class="full-screen-button">
     <button (click)="toggleGameAreaFullScreen()">Full Screen</button>
   </div>
+
+  <!-- Details container section containing comments and other details -->
   <div class="details-container">
+    <!-- Comment section displaying comments -->
     <div class="comment-section">
       <div class="comments">
         <h2>Comments</h2>
-        <!-- Comments go here -->
-         <app-comments></app-comments>
+        <!-- Comments component goes here -->
+        <app-comments></app-comments>
       </div>
     </div>
+
+    <!-- Other details section displaying additional game image and title -->
     <div class="other-details">
       <img
         src="https://images.pexels.com/photos/14823951/pexels-photo-14823951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
