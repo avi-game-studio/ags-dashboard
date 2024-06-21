@@ -1,60 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-// import { Product } from '@domain/product';
-// import { CarouselService } from '@service/CarouselServiceService';
+import { Component, Input } from '@angular/core';
+import { product } from './carousel.model';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { PRODUCTS } from './mockData';
+
 
 @Component({
-    selector: 'carousel-basic-demo',
-    templateUrl: './carousel.component.html',
-    standalone: true,
-    imports: [CarouselModule, ButtonModule, TagModule],
-    // providers: [CarouselService]
+  selector: 'app-carousel',
+  standalone: true,
+  imports: [CarouselModule, ButtonModule, TagModule, CommonModule, FormsModule],
+  templateUrl: './carousel.component.html',
+  styleUrls: ['./carousel.component.css'],
 })
-export class CarouselComponent implements OnInit {
-    products: any[];
+export class CarouselComponent {
+  // ⚠️ warning ⚠️
+  // Make sure to use 10 cards.
+  // If you use < 10. It may cause problems.
+  @Input() products: product[] = [];
 
-    responsiveOptions: any[] | undefined;
-
-    constructor() {
-        this.products = []
-    }
-
-    ngOnInit() {
-        // this.productService.getProductsSmall().then((products) => {
-        // this.products = products;
-        // });
-
-        this.responsiveOptions = [
-            {
-                breakpoint: '1199px',
-                numVisible: 1,
-                numScroll: 1
-            },
-            {
-                breakpoint: '991px',
-                numVisible: 2,
-                numScroll: 1
-            },
-            {
-                breakpoint: '767px',
-                numVisible: 1,
-                numScroll: 1
-            }
-        ];
-    }
-
-    getSeverity(status: string) {
-        switch (status) {
-            case 'INSTOCK':
-                return 'success';
-            case 'LOWSTOCK':
-                return 'warning';
-            case 'OUTOFSTOCK':
-                return 'danger';
-            default:
-                return "info"
-        }
-    }
+  constructor() {
+    // Example product data
+    this.products = PRODUCTS;
+  }
 }

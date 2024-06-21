@@ -1,36 +1,32 @@
-<p-carousel 
-    [value]="products" 
-    [numVisible]="3" 
-    [numScroll]="3" 
+
+<div class="card">
+  <p-carousel
+    [value]="products"
+    [numVisible]="6" 
+    [numScroll]="2" 
     [circular]="false" 
-    [responsiveOptions]="responsiveOptions">
-        <ng-template let-product pTemplate="item">
-            <div class="border-1 surface-border border-round m-2 p-3">
-                <div class="mb-3">
-                    <div class="relative mx-auto">
-                        <img 
-                            src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" 
-                            [alt]="product.name" 
-                            class="w-full border-round" />
-                        <p-tag 
-                            [value]="product.inventoryStatus" 
-                            [severity]="getSeverity(product.inventoryStatus)" 
-                            class="absolute" 
-                            [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" />
-                    </div>
+  >
+    <ng-template let-product pTemplate="item">
+      <!-- carousel slide -->
+      <div class="carousel-container">
+        <div class="carousel-img">
+            <img src="https://img.zorores.com/_r/1366x768/100/46/d8/46d8e6d3fcd4a016ff5e90f0281eae76/46d8e6d3fcd4a016ff5e90f0281eae76.jpg" alt="">
+            <div class="carousel-layer">
+                <div class="layer"></div>
+                <div class="gameTitle"><h2>{{product.GameName}}</h2></div>
+                <div class="gameDetail"><p>{{product.GameDetails}}</p></div>
+                <div class="carousel-bnt">
+                    <button class="bntPlay">PLAY</button>
+                    <button class="bntDetails">Details</button>
                 </div>
-                <div class="mb-3 font-medium">
-                    {{ product.name }}
-                </div>
-                <div class="flex justify-content-between align-items-center">
-                <div class="mt-0 font-semibold text-xl">
-                    {{ '$' + product.price }}
-                </div>
-                    <span>
-                        <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
-                        <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
-                    </span>
-                </div>
-            </div>
-        </ng-template>
-</p-carousel>
+        </div>
+
+       
+
+        </div>
+
+ 
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
