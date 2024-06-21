@@ -6,13 +6,14 @@ import { PlayGameComponent } from './pages/play-game/play-game.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { authGuard } from './core/guards/auth.guard';
 import { CarouselComponent } from './features/carousel/carousel.component';
-
+import { TrendingCardComponent } from './shared/components/trending-card/trending-card.component';
 
 export const routes: Routes = [
     { path: 'landing', component: LandingPageComponent },
     { path: 'home', component: HomePageComponent },
     { path: 'carousel', component: CarouselComponent },
     { path: 'game-details', component: GameDetailsComponent, canActivate: [authGuard] },
+    { path:"trending-card",component:TrendingCardComponent},
     { path: 'play/:game-id', component: PlayGameComponent, canActivate: [authGuard] },
     { path: 'page-not-found', component: PageNotFoundComponent },  // Wildcard route for a 404 page
     { path: '', redirectTo: '/landing', pathMatch: 'full' }, // redirect to `first-component`
