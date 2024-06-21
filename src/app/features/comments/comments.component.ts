@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './comments.component.html',
-  styleUrl: './comments.component.css'
+  styleUrl: './comments.component.css',
 })
-export class CommentsComponent {
-
-}
+export class CommentsComponent {}

@@ -1,1 +1,60 @@
-<p>play-game works!</p>
+<header>
+  <div class="menu-icon">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <div class="logo">
+    <img src="assets/logo.png" alt="logo" />
+  </div>
+  <div class="title">AVI GAME STUDIO</div>
+</header>
+<div class="container">
+  <div class="content">
+    <div class="game-status">
+      <h2>Game Status</h2>
+      <div class="level-grid">
+        <div *ngFor="let enabled of levels; let i = index" [class.disabled]="!enabled">
+          <button (click)="enabled ? completeLevel(i + 1) : null">{{ i + 1 }}</button>
+        </div>
+      </div>
+    </div>
+    <div class="game-area">
+      <h2>Game Area</h2>
+      <!-- Game area content goes here -->
+    </div>
+    <div class="game-details">
+      <img
+        src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Game Image"
+      />
+      <div class="title">One Piece</div>
+      <div class="buttons">
+        <button>Play</button>
+        <button>Pause</button>
+        <button>Stop</button>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+      </p>
+    </div>
+  </div>
+  <div class="full-screen-button">
+    <button (click)="toggleGameAreaFullScreen()">Full Screen</button>
+  </div>
+  <div class="details-container">
+    <div class="comment-section">
+      <div class="comments">
+        <h2>Comments</h2>
+        <!-- Comments go here -->
+         <app-comments></app-comments>
+      </div>
+    </div>
+    <div class="other-details">
+      <img
+        src="https://images.pexels.com/photos/14823951/pexels-photo-14823951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Other Game Image"
+      />
+      <div class="title">Other Game</div>
+      <!-- More details about the other game -->
+    </div>
+  </div>
+</div>
