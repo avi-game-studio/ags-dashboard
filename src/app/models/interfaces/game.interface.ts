@@ -8,4 +8,5 @@ export interface Game_card {
     trending: boolean;
     GameName: string;
     image: string;
+    count?: number; 
 }

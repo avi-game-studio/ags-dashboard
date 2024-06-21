@@ -13,7 +13,12 @@ import { Game_card } from '../../../models/interfaces/game.interface';
   styleUrls: ['./game-card.component.css'],
 })
 export class GameCardComponent implements OnInit {
-    @Input() products: Game_card[]=[];
+
+  clickme(product: Game_card): void {
+    product.count = (product.count || 0) + 1;
+  }
+
+  @Input() products: Game_card[]=[];
 
   ngOnInit(): void {
     this.products=[
