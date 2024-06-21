@@ -13,11 +13,7 @@ export const routes: Routes = [
     { path: 'home', component: HomePageComponent },
     { path: 'carousel', component: CarouselComponent },
     { path: 'game-details', component: GameDetailsComponent, canActivate: [authGuard] },
-<<<<<<< HEAD
-    { path: 'trending-card',component:TrendingCardComponent},
-=======
     { path: "trending-card", component: TrendingCardComponent },
->>>>>>> ef4388fbff1be15d8b766626d796251b925fdd6e
     { path: 'play/:game-id', component: PlayGameComponent, canActivate: [authGuard] },
     { path: 'page-not-found', component: PageNotFoundComponent },  // Wildcard route for a 404 page
     { path: '', redirectTo: '/landing', pathMatch: 'full' }, // redirect to `first-component`
