@@ -4,3 +4,8 @@ export interface Game {
     image: string;
     trending: boolean;
 }
+export interface Game_card {
+    trending: boolean;
+    GameName: string;
+    image: string;
+}
