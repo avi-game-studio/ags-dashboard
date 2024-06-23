@@ -19,7 +19,7 @@ export class CarouselComponent implements OnInit {
   @Input() controls = true;
   @Input() autoSlide = false;
   @Input() sliderInterval = 3000; // Default to 3 seconds
-  responsiveOptions: any[] | undefined;
+ 
 
   selectedIndex = 0;
 
