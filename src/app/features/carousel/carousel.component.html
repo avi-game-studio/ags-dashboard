@@ -1,32 +1,37 @@
 
-<div class="card">
-  <p-carousel
-    [value]="products"
-    [numVisible]="6" 
-    [numScroll]="2" 
-    [circular]="false" 
-  >
-    <ng-template let-product pTemplate="item">
-      <!-- carousel slide -->
-      <div class="carousel-container">
-        <div class="carousel-img">
-            <img src="https://img.zorores.com/_r/1366x768/100/46/d8/46d8e6d3fcd4a016ff5e90f0281eae76/46d8e6d3fcd4a016ff5e90f0281eae76.jpg" alt="">
-            <div class="carousel-layer">
-                <div class="layer"></div>
-                <div class="gameTitle"><h2>{{product.GameName}}</h2></div>
-                <div class="gameDetail"><p>{{product.GameDetails}}</p></div>
-                <div class="carousel-bnt">
-                    <button class="bntPlay">PLAY</button>
-                    <button class="bntDetails">Details</button>
-                </div>
+
+<div *ngIf="products && products.length > 0" class="carousel-container">
+  <div class="carousel-slider">
+    <div *ngFor="let product of products; let i = index" [ngClass]="{'image-active': selectedIndex === i}" class="carousel-slide">
+      <img 
+           [src]="product.image"
+           [alt]="product.GameName"
+           class="fade">
+      <div class="carousel-layer"></div>
+      <div class="carousel-inside" *ngIf="selectedIndex === i">
+        <div class="carousel-content">
+          <h2>{{ product.GameName }}</h2>
+          <p>{{ product.GameDetails }}</p>
+          <div class="carousel-btns">
+            <button class="carousel-btn btn-play "><i class="fa-solid fa-play "></i> <a href="#" class="bnt-link">{{ product.Play }}</a></button>
+            <button class="carousel-btn btn-details"><a href="#" class="bnt-link">Details</a><i class="fa-solid fa-greater-than"></i></button>
+          </div>
         </div>
-
-       
-
-        </div>
-
- 
       </div>
-    </ng-template>
-  </p-carousel>
+    </div>
+  </div>
+  
+  <div *ngIf="indicators" class="carousel-dot-container">
+    <span *ngFor="let dot of products; let i = index"
+          class="dot"
+          [ngClass]="{'active': selectedIndex === i}"
+          (click)="selectImage(i)"></span>
+  </div>
+  
+  <button *ngIf="controls" class="btn-carousel btn-prev" (click)="onPrevClick()">
+    <i class="fas fa-arrow-circle-left icon-carousel icon-prev"></i>
+  </button>
+  <button *ngIf="controls" class="btn-carousel btn-next" (click)="onNextClick()">
+    <i class="fas fa-arrow-circle-right icon-carousel icon-next"></i>
+  </button>
 </div>

@@ -1,25 +1,60 @@
-import { Component, Input } from '@angular/core';
-import { product } from './carousel.model';
-import { CarouselModule } from 'primeng/carousel';
-import { ButtonModule } from 'primeng/button';
-import { TagModule } from 'primeng/tag';
+import { Component, Input, OnInit } from '@angular/core';
+import { product } from '../../models/interfaces/carousel.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { PRODUCTS } from './mockData';
+import { PRODUCTS } from '../../models/mock-data/carousel-mockData';
+import { CarouselModule } from 'primeng/carousel';
 
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [CarouselModule, ButtonModule, TagModule, CommonModule, FormsModule],
+  imports: [ CommonModule, FormsModule,CarouselModule],
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
 })
-export class CarouselComponent {
-  // ⚠️ warning ⚠️
-  // Make sure to use 10 cards.
-  // If you use < 10. It may cause problems.
+export class CarouselComponent implements OnInit {
   @Input() products: product[] = [];
+  @Input() indicators = true;
+  @Input() controls = true;
+  @Input() autoSlide = false;
+  @Input() sliderInterval = 3000; // Default to 3 seconds
+  responsiveOptions: any[] | undefined;
+
+  selectedIndex = 0;
+
+  ngOnInit(): void {
+    if (this.autoSlide) {
+      this.autoSlideProducts();
+    }
+  }
+
+  autoSlideProducts(): void {
+    setInterval(() => {
+      this.onNextClick();
+    }, this.sliderInterval);
+  }
+
+  // Set index of image on dot / indicator click
+  selectImage(index: number): void {
+    this.selectedIndex = index;
+  }
+
+  onPrevClick(): void {
+    if (this.selectedIndex === 0) {
+      this.selectedIndex = this.products.length - 1;
+    } else {
+      this.selectedIndex--;
+    }
+  }
+
+  onNextClick(): void {
+    if (this.selectedIndex === this.products.length - 1) {
+      this.selectedIndex = 0;
+    } else {
+      this.selectedIndex++;
+    }
+  }
 
   constructor() {
     // Example product data
