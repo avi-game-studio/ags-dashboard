@@ -9,13 +9,12 @@ import { TrendingCardComponent } from './shared/components/trending-card/trendin
 import { GameCardComponent } from './shared/components/game-card/game-card.component';
 
 export const routes: Routes = [
-    { path: 'landing', component: LandingPageComponent },
-    { path: 'home', component: HomePageComponent },
-    { path: 'game-details', component: GameDetailsComponent, canActivate: [authGuard] },
-    { path: "trending-card", component: TrendingCardComponent },
-    { path: "game-card", component: GameCardComponent },
-    { path: 'play/:game-id', component: PlayGameComponent, canActivate: [authGuard] },
-    { path: 'page-not-found', component: PageNotFoundComponent },  // Wildcard route for a 404 page
-    { path: '', redirectTo: '/landing', pathMatch: 'full' }, // redirect to `first-component`
-    { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
+  { path: 'landing', component: LandingPageComponent },
+  { path: 'home', component: HomePageComponent },
+  { path: 'game-details', component: GameDetailsComponent, canActivate: [authGuard] },
+  { path: "trending-card", component: TrendingCardComponent },
+  { path: 'play/:game-id', component: PlayGameComponent, canActivate: [authGuard] },
+  { path: 'page-not-found', component: PageNotFoundComponent },  // Wildcard route for a 404 page
+  { path: '', redirectTo: '/landing', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
