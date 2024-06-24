@@ -20,10 +20,10 @@ export class PlayGameComponent implements OnInit {
   }));
 
   // Component's constructor function
-  constructor() {}
+  constructor() { }
 
   // Lifecycle hook that is called after Angular has initialized all data-bound properties of a directive
-  ngOnInit() {}
+  ngOnInit() { }
 
   // Method to toggle the game area to full screen
   toggleGameAreaFullScreen() {
