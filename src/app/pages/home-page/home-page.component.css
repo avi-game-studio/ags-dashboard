@@ -1,0 +1,53 @@
+.home-section {
+    height: 50vh;
+    background-color: #413a73;
+}
+
+.curosal-container {
+    width: 50vw;
+    padding: 20px;
+}
+
+.title {
+    color: white;
+}
+
+.details-container {
+    padding-left: 20px;
+}
+
+.tags-container {
+    display: flex;
+    gap: 50px;
+}
+
+.tags-container h3 {
+    color: #53ff86;
+}
+
+.details-container p {
+    text-align: justify;
+    width: 30vw;
+}
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+}
+
+.play-btn {
+    background-color: #53ff86;
+    padding: 10px;
+    width: 100px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.details-btn {
+    padding: 10px;
+    width: 100px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 20px;
+}
