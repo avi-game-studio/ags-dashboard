@@ -1,13 +1,17 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Pipe({
-  name: 'customDateFormat',
+  name: 'customDate',
   standalone: true
 })
-export class CustomDateFormatPipe implements PipeTransform {
+export class CustomDatePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  constructor(private datePipe: DatePipe) {}
+
+  transform(value: any, format: string = 'MMM d, y, h:mm:ss a'): any {
+    if (!value) return value;
+    return this.datePipe.transform(value, format);
   }
 
 }

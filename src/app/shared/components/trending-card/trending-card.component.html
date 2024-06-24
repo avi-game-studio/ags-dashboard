@@ -1,1 +1,33 @@
-<p>trending-card works!</p>
+<h2>Trending:</h2>
+<div class="card">
+  <p-carousel
+    [value]="products"
+    [numVisible]="6" 
+    [numScroll]="2" 
+    [circular]="false" 
+  >
+    <ng-template let-product pTemplate="item">
+      <!-- Trending Card -->
+      <div class="trending-section-wrapper">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="trending-slide" *ngFor="let product of products">
+              <div class="trending-item-sidebar " >
+                <div class="gradient-overlay-sidebar"></div>
+                <p class="f-poppins">{{ product.GameName }}</p>
+                <span>{{ product.id }}</span>
+              </div>
+              <a href="#">
+                <div class="gradient-overlay"></div> 
+                <img
+                  [src]="product.image"
+                  class="trending-slide-img"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
