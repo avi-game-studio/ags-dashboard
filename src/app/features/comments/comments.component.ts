@@ -90,7 +90,7 @@ export class CommentsComponent implements OnInit {
         id: Date.now(),
         text: this.newReply,
         author: 'You',
-        profilePicture: 'path/to/your-profile-picture.jpg', 
+        profilePicture: 'path/to/your-profile-picture.jpg',
         likes: 0,
         dislikes: 0,
         likedBy: new Set<string>(),
