@@ -6,7 +6,6 @@ import { PlayGameComponent } from './pages/play-game/play-game.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { authGuard } from './core/guards/auth.guard';
 import { TrendingCardComponent } from './shared/components/trending-card/trending-card.component';
-import { GameCardComponent } from './shared/components/game-card/game-card.component';
 
 export const routes: Routes = [
   { path: 'landing', component: LandingPageComponent },
