@@ -7,7 +7,6 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { authGuard } from './core/guards/auth.guard';
 import { CarouselComponent } from './features/carousel/carousel.component';
 import { TrendingCardComponent } from './shared/components/trending-card/trending-card.component';
-import { GlobalHeaderComponent } from './shared/components/global-header/global-header.component';
 
 export const routes: Routes = [
     { path: 'landing', component: LandingPageComponent },
