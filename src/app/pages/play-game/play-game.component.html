@@ -1,17 +1,3 @@
-<!-- Header section containing the menu icon, logo, and title -->
-<header>
-  <div class="menu-icon">
-    <i class="fa-solid fa-bars"></i>
-    <!-- Font Awesome icon for the menu -->
-  </div>
-  <div class="logo">
-    <img src="assets/logo.png" alt="logo" />
-    <!-- Logo image -->
-  </div>
-  <div class="title">AVI GAME STUDIO</div>
-  <!-- Title of the game studio -->
-</header>
-
 <!-- Main container for the content -->
 <div class="container">
   <!-- Content section containing game status, game area, and game details -->
@@ -21,10 +7,7 @@
       <h2>Game Status</h2>
       <div class="level-grid">
         <!-- Loop through levels and display each level -->
-        <div
-          *ngFor="let level of levels; let i = index"
-          [class.locked]="!level.enabled"
-        >
+        <div *ngFor="let level of levels; let i = index" [class.locked]="!level.enabled">
           <button (click)="level.enabled ? completeLevel(i) : null">
             <!-- Display level number if enabled, otherwise display lock icon -->
             {{ level.enabled ? i + 1 : "🔒" }}
@@ -43,8 +26,7 @@
     <div class="game-details">
       <img
         src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Game Image"
-      />
+        alt="Game Image" />
       <div class="title">One Piece</div>
       <div class="buttons">
         <button>Play</button>
@@ -78,8 +60,7 @@
     <div class="other-details">
       <img
         src="https://images.pexels.com/photos/14823951/pexels-photo-14823951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="Other Game Image"
-      />
+        alt="Other Game Image" />
       <div class="title">Other Game</div>
       <!-- More details about the other game -->
     </div>

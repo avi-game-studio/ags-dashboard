@@ -6,27 +6,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-header {
-  background-color: #655ab9;
-  color: white;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 60px;
-  box-sizing: border-box;
-}
-header .menu-icon {
-  font-size: 24px;
-}
-header .logo img {
-  width: 30px;
-  height: 30px;
-}
-header .title {
-  font-size: 24px;
-  font-weight: bold;
-}
+
 .container {
   background-color: #413a73;
   display: flex;
@@ -35,11 +15,13 @@ header .title {
   padding: 10px;
   box-sizing: border-box;
 }
+
 .content {
   display: flex;
   flex: 1;
   gap: 10px;
 }
+
 .game-status {
   flex: 0.8;
   display: flex;
@@ -50,16 +32,19 @@ header .title {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .game-status h2 {
   margin-top: 0;
   font-size: 18px;
 }
+
 .game-status .level-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   flex: 1;
 }
+
 .game-status .level-grid div {
   position: relative;
   padding: 10px;
@@ -70,18 +55,23 @@ header .title {
   cursor: pointer;
   background-color: #f0f0f0;
 }
+
 .game-status .level-grid div.locked {
-  background-color: #cccccc; /* Gray background for locked levels */
+  background-color: #cccccc;
+  /* Gray background for locked levels */
   background: url("/src/assets/padlock.png") no-repeat center center;
   background-size: 20px 20px;
   cursor: not-allowed;
 }
+
 .game-status .level-grid div.locked button {
   color: transparent;
 }
+
 .game-status .level-grid div:not(.locked) {
   background-color: #53ff86;
 }
+
 .game-status .level-grid button {
   width: 100%;
   height: 100%;
@@ -91,6 +81,7 @@ header .title {
   font: inherit;
   cursor: pointer;
 }
+
 .game-area {
   flex: 2.5;
   display: flex;
@@ -104,10 +95,12 @@ header .title {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .game-area h2 {
   margin-top: 0;
   font-size: 18px;
 }
+
 .game-details {
   flex: 0.7;
   display: flex;
@@ -119,22 +112,26 @@ header .title {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .game-details img {
   width: 100%;
   max-width: 200px;
   height: auto;
   border-radius: 10px;
 }
+
 .game-details .title {
   font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
 }
+
 .game-details .buttons {
   display: flex;
   gap: 10px;
   margin-top: 10px;
 }
+
 .game-details .buttons button {
   background-color: #53ff86;
   border: none;
@@ -144,13 +141,16 @@ header .title {
   color: white;
   transition: background-color 0.3s;
 }
+
 .game-details .buttons button:hover {
   background-color: #45d96d;
 }
+
 .game-details p {
   margin-top: 10px;
   font-size: 14px;
 }
+
 .full-screen-button {
   display: flex;
   justify-content: center;
@@ -158,6 +158,7 @@ header .title {
   margin-top: 10px;
   margin-left: 50%;
 }
+
 .full-screen-button button {
   background-color: #53ff86;
   color: white;
@@ -167,13 +168,16 @@ header .title {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .full-screen-button button:hover {
   background-color: #5f578c;
 }
+
 .details-container {
   display: flex;
   gap: 10px;
 }
+
 .comment-section {
   flex: 1.7;
   background-color: rgba(255, 255, 255, 0.462);
@@ -181,10 +185,12 @@ header .title {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .comment-section h2 {
   margin-top: 0;
   font-size: 18px;
 }
+
 .other-details {
   flex: 0.5;
   background-color: rgba(255, 255, 255, 0.462);
@@ -192,12 +198,14 @@ header .title {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .other-details img {
   width: 40%;
   max-width: 200px;
   height: auto;
   border-radius: 10px;
 }
+
 .other-details .title {
   margin-top: 10px;
   font-size: 16px;

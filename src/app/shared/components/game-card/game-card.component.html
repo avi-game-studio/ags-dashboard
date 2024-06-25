@@ -1,23 +1,22 @@
 <div class="game-card">
-    <h2>Game Listing:</h2>
-    <div class="game_list">
-        <div class="game-item" *ngFor="let product of products" (click)="clickme(product)">
-          <!-- 1 -->
-          <a href="#" target="_blank"> <div class="gradient-overlay-sidebar"></div></a>
-          <div class="icon"><span><i class="fa-regular fa-eye" style="color: white;"></i>{{ product.count || 0}}</span></div>
-          <div class="game-poster" >
-            <img
-              class="game-poster-img"
-              [alt]="product.GameName"
-              [src]="product.image"
-            />
-          </div>
-          <div class="game-detail">
-            <h4 class="game-name">{{product.GameName}}</h4>
-            <div class="desc">
-              <span class="desc-item">Description</span>
-            </div>
-          </div>
+  <h2>Game Listing:</h2>
+  <div class="game_list">
+    <div class="game-item" *ngFor="let product of products" (click)="clickme(product)">
+      <!-- 1 -->
+      <a href="#" target="_blank">
+        <div class="gradient-overlay-sidebar"></div>
+      </a>
+      <div class="icon"><span><i class="fa-regular fa-eye" style="color: white;"></i>{{ product.count || 0}}</span>
+      </div>
+      <div class="game-poster">
+        <img class="game-poster-img" [alt]="product.GameName" [src]="product.image" />
+      </div>
+      <div class="game-detail">
+        <h4 class="game-name">{{product.GameName}}</h4>
+        <div class="desc">
+          <span class="desc-item">Description</span>
         </div>
+      </div>
     </div>
   </div>
+</div>
