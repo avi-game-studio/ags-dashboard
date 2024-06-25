@@ -3,23 +3,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .game-card {
   width: 98vw;
   background-color: #413a73;
   color: white;
 }
+
 .game_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
+
 .game-item {
   width: 190px;
   background: linear-gradient(to top, #000000 0, rgba(0, 0, 0, 0) 76%);
   position: relative;
   margin: 20px 5px;
-  box-shadow: rgba(0, 0, 0, 0.384) 0px 10px 20px, rgba(0, 0, 0, 0.449) 8px 8px 8px ;
+  box-shadow: rgba(0, 0, 0, 0.384) 0px 10px 20px, rgba(0, 0, 0, 0.449) 8px 8px 8px;
 }
+
 .game-poster {
   width: 100%;
   height: 370px;
@@ -27,11 +31,13 @@
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.208);
 }
+
 .game-poster .tick {
   position: absolute;
   bottom: 3px;
   z-index: 10;
 }
+
 .game-poster-img {
   position: absolute;
   width: 100%;
@@ -42,35 +48,39 @@
   right: 0;
   bottom: 0;
 }
+
 a {
   color: #fff;
   text-decoration: none !important;
   outline: 0;
 }
-h2{
-    padding: 20px 0 0 20px;
-    color: #53ff86;
+
+h2 {
+  padding: 20px 0 0 20px;
+  color: #53ff86;
 }
-h4{
-    color: #53ff86;
+
+h4 {
+  color: #53ff86;
   margin: 5px;
 }
+
 .desc {
   padding: 10px 5px;
 }
+
 .game-detail {
   position: absolute;
   bottom: 0;
   width: 90%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 1.644),
-    rgba(0, 0, 0, 0.163),
-    rgba(0, 0, 0, 0)
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 1.644),
+      rgba(0, 0, 0, 0.163),
+      rgba(0, 0, 0, 0));
   z-index: 999;
   left: 10px;
 }
+
 .game-poster:after {
   content: "";
   position: absolute;
@@ -80,23 +90,24 @@ h4{
   bottom: -40%;
   z-index: 2;
 }
+
 .gradient-overlay-sidebar {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 1.644) 15%,
-    rgba(0, 0, 0, 0)
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 1.644) 15%,
+      rgba(0, 0, 0, 0));
   z-index: 99;
 }
-.icon{
-    position: absolute;
-    z-index: 999;
-    bottom: 80px;
-    left: 15px;
-    i{
-        padding-right: 5px;
-    }
+
+.icon {
+  position: absolute;
+  z-index: 999;
+  bottom: 80px;
+  left: 15px;
+
+  i {
+    padding-right: 5px;
+  }
 }
