@@ -6,10 +6,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { GameDetailsService } from '../../../core/services/api/game-details.service';
 import { Game } from '../../../models/interfaces/game.interface';
+import { RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-trending-card',
   standalone: true,
-  imports: [CarouselModule, ButtonModule, TagModule, CommonModule, FormsModule],
+  imports: [CarouselModule, ButtonModule, TagModule, CommonModule, FormsModule,RouterLink],
   templateUrl: './trending-card.component.html',
   styleUrls: ['./trending-card.component.css'],
 })

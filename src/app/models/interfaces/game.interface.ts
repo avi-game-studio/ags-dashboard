@@ -3,6 +3,7 @@ export interface Game {
     GameName: string;
     image: string;
     trending: boolean;
+    link:string
 }
 export interface Game_card {
     trending: boolean;
