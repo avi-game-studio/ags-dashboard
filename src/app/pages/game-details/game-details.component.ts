@@ -1,4 +1,6 @@
+
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-game-details',
@@ -7,6 +9,7 @@ import { Component } from '@angular/core';
   templateUrl: './game-details.component.html',
   styleUrl: './game-details.component.css'
 })
-export class GameDetailsComponent {
+export class GameDetailsComponent{
+  
+  }
 
-}

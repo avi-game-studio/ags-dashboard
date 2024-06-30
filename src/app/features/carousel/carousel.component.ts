@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PRODUCTS } from '../../models/mock-data/carousel-mockData';
 import { CarouselModule } from 'primeng/carousel';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [ CommonModule, FormsModule,CarouselModule],
+  imports: [ CommonModule, FormsModule,CarouselModule,RouterLink],
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
 })

@@ -17,7 +17,7 @@
                 <p class="f-poppins">{{ product.GameName }}</p>
                 <span>{{ product.id }}</span>
               </div>
-              <a href="#">
+              <a routerLink="/{{product.link}}">
                 <div class="gradient-overlay"></div> 
                 <img
                   [src]="product.image"
