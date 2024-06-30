@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './page-not-found.component.css'
 })
 export class PageNotFoundComponent {
-
+  navigateToHomePage() {
+    window.location.href = "/";
+  }
 }

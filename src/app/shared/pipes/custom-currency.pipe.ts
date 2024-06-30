@@ -7,7 +7,7 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class CustomCurrencyPipe implements PipeTransform {
 
-  constructor(private currencyPipe: CurrencyPipe) {}
+  constructor(private currencyPipe: CurrencyPipe) { }
 
   transform(value: number, currencyCode: string = 'INR', display: string | boolean = 'symbol', digitsInfo?: string, locale?: string): string | null {
     if (value == null) {
@@ -16,6 +16,6 @@ export class CustomCurrencyPipe implements PipeTransform {
 
     const formattedCurrency = this.currencyPipe.transform(value, currencyCode, display, digitsInfo, locale);
 
-    return formattedCurrency ? `Amount: ${formattedCurrency}` : null;
+    return formattedCurrency ? `${formattedCurrency}` : null;
   }
 }

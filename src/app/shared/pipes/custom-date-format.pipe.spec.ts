@@ -1,8 +1,10 @@
-import { CustomDateFormatPipe } from './custom-date-format.pipe';
+import { DatePipe } from '@angular/common';
+import { CustomDatePipe } from './custom-date-format.pipe';
 
 describe('CustomDateFormatPipe', () => {
   it('create an instance', () => {
-    const pipe = new CustomDateFormatPipe();
+    const datePipe = new DatePipe("");
+    const pipe = new CustomDatePipe(datePipe);
     expect(pipe).toBeTruthy();
   });
 });
