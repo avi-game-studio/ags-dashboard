@@ -6,7 +6,8 @@
       <a href="#" target="_blank">
         <div class="gradient-overlay-sidebar"></div>
       </a>
-      <div class="icon"><span><i class="fa-regular fa-eye" style="color: white;"></i>{{ product.count || 0}}</span>
+      <div class="icon">
+        <span><i class="fa-regular fa-eye"></i>{{ product.count || 0}}</span>
       </div>
       <div class="game-poster">
         <img class="game-poster-img" [alt]="product.GameName" [src]="product.image" />
@@ -14,7 +15,7 @@
       <div class="game-detail">
         <h4 class="game-name">{{product.GameName}}</h4>
         <div class="desc">
-          <span class="desc-item">Description</span>
+          Description
         </div>
       </div>
     </div>

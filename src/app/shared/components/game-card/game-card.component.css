@@ -2,20 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: transparent;
+  color: white;
 }
 
 .game-card {
   width: 98vw;
-  background-color: #413a73;
-  color: white;
 }
 
 .game_list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  justify-content: space-around;
 }
-
 .game-item {
   width: 190px;
   background: linear-gradient(to top, #000000 0, rgba(0, 0, 0, 0) 76%);
@@ -50,23 +50,23 @@
 }
 
 a {
-  color: #fff;
   text-decoration: none !important;
   outline: 0;
 }
 
 h2 {
   padding: 20px 0 0 20px;
-  color: #53ff86;
+  color: black;
 }
 
 h4 {
-  color: #53ff86;
   margin: 5px;
+  background-color: transparent;
 }
 
 .desc {
   padding: 10px 5px;
+  background-color: transparent;
 }
 
 .game-detail {

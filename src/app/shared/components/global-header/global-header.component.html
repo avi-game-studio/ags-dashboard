@@ -1,19 +1,18 @@
-<!-- Header section containing the menu icon, logo, and title -->
-<header>
-    <div class="header-container">
+<div class="block-header">
+    <span class="block-title">
         <div class="menu-icon">
             <i class="fa-solid fa-bars"></i>
-            <!-- Font Awesome icon for the menu -->
         </div>
-        <div class="logo">
-            <img src="assets/logo.png" alt="logo" />
-            <!-- Logo image -->
-        </div>
-        <div class="title">AVI GAME STUDIO</div>
-        <input type="text" placeholder="Search">
+        <img src="assets/logo.png" alt="logo" width="35px" height="35px" />
+        <span>AVI GAME STUDIO</span>
+    </span>
+    <div class="block-actions text-900">
+        <p-inputGroup>
+            <input type="text" pInputText placeholder="Keyword" />
+            <button type="button" pButton label="Search" class="p-button-dark"></button>
+        </p-inputGroup>
     </div>
-    <!-- Title of the game studio -->
-    <div class="btn-container">
-        <button>Log In</button>
+    <div>
+    <p-button label="Login" />
     </div>
-</header>
+</div>

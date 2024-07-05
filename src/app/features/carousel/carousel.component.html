@@ -5,8 +5,7 @@
     <div *ngFor="let product of products; let i = index" [ngClass]="{'image-active': selectedIndex === i}" class="carousel-slide">
       <img 
            [src]="product.image"
-           [alt]="product.GameName"
-           class="fade">
+           [alt]="product.GameName">
       <div class="carousel-layer"></div>
       <div class="carousel-inside" *ngIf="selectedIndex === i">
         <div class="carousel-content">

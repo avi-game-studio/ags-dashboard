@@ -1,52 +1,8 @@
+
 input {
-    width: 250px;
-    height: 40px;
+    width: 50vw;
+    height: 45px;
 }
-
-.btn-container {
-    float: right;
-}
-
-button {
-    background-color: #53ff86;
-    padding: 10px;
-    width: 100px;
-    font-weight: bold;
-}
-
-header {
-    background-color: #655ab9;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    height: 60px;
-    box-sizing: border-box;
-}
-
-.header-container {
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.header-container>* {
-    margin-right: 20px;
-}
-
-header .menu-icon {
-    font-size: 24px;
-}
-
-header .logo img {
-    width: 30px;
-    height: 30px;
-}
-
-header .title {
-    font-size: 24px;
-    font-weight: bold;
+.menu-icon,img,span{
+    margin-right:30px;
 }

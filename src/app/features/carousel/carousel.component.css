@@ -1,5 +1,8 @@
+*{
+  /* background-color: black;
+  color: white; */
+}
 .carousel-container {
-  background-color: #413a73;
   height: 75vh;
   display: flex;
   position: relative;
@@ -20,7 +23,6 @@
   display: none;
   height: 75vh;
   width: 100vw;
-  position: relative;
 }
 
 .carousel-slide img {
@@ -28,6 +30,7 @@
   height: 100vh;
   object-fit: cover;
   justify-content: center;
+  opacity: 0.4;
 }
 
 .image-active {
@@ -38,9 +41,11 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: #413a73;
-  top: 0;
-  opacity: 0.6;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 1.644),
+      rgba(0, 0, 0, 0.163),
+      rgba(0, 0, 0, 0));  
+  z-index: 999;
 }
 
 .carousel-inside {
@@ -128,6 +133,8 @@
   transform: translateY(-50%);
   border-top-left-radius: 35px;
   border-bottom-left-radius: 35px;
+  
+  
 }
 
 .icon-carousel {
@@ -155,29 +162,11 @@ a{
   border-radius: 35px;
   padding:10px ;
 }
-.btn-play{
-  background-color: #53ff86;
-}
-.btn-play:hover{
-  background-color: #413a73;
-  color: #fff;
-}
-.btn-play a:hover{
-  background-color: #413a73;
-  color: #fff;
-}
 .btn-play i{
   padding-right: 1rem;
 }
 .btn-details{
   background-color: #413a73;
-}
-.btn-details:hover{
-  background-color: #53ff86;
-}
-.btn-details i:hover{
-  background-color: #53ff86;
-  color: #fff;
 }
 .btn-details i{
   padding-left: 1rem;

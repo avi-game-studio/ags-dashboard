@@ -7,7 +7,7 @@ export interface Game {
 }
 export interface Game_card {
     trending: boolean;
-    GameName: string;
+    GameName: string;   
     image: string;
     count?: number; 
 }

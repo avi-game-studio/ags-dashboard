@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #413a73;
-  color: #53ff86;
+  background-color: white;
+  color: black;
 
 }
 
 .trending-section-wrapper {
-  width: 155vw;
+  width: 160vw;
   height: 38vh;
 }
 
